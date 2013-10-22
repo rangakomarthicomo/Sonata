@@ -1,0 +1,25 @@
+Application\PostBundle\Entity\User:
+    type: entity
+    table: users
+    repositoryClass: Application\PostBundle\Entity\UserRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+        username:
+            type: string
+            length: 255
+        password:
+            type: string
+            length: 255
+    oneToMany:
+      posts:
+        targetEntity: Post
+        mappedBy: usero
+        cascade: [persist, remove]
+    lifecycleCallbacks: {  }

@@ -1,0 +1,7 @@
+parameters:
+#    application_post.example.class: Application\PostBundle\Example
+
+services:
+#    application_post.example:
+#        class: %application_post.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

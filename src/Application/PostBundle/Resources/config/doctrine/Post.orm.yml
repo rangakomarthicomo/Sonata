@@ -1,0 +1,26 @@
+Application\PostBundle\Entity\Post:
+    type: entity
+    table: posts
+    repositoryClass: Application\PostBundle\Entity\PostRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        title:
+            type: string
+            length: 255
+        summary:
+            type: string
+            length: 255
+        body:
+            type: text
+    manyToOne:
+        usero:
+           targetEntity: User
+           joinColumn:
+                name: user_id
+                referncedColumnName: id
+                nullable: false
+    lifecycleCallbacks: {  }
